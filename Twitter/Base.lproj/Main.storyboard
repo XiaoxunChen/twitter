@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rrt-Wg-EOP">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="rrt-Wg-EOP" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pA5-BR-342">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIj-WU-97I">
-                                <rect key="frame" x="69.5" y="289" width="236" height="89"/>
+                                <rect key="frame" x="96" y="418.66666666666669" width="236" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="236" id="0Ta-wi-7D2"/>
                                     <constraint firstAttribute="height" constant="89" id="nfy-ae-Nit"/>
@@ -56,17 +56,53 @@
             <objects>
                 <tableViewController id="VI2-pj-DOe" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1Dd-qK-5vy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O9x-TJ-7mF">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="132" id="O9x-TJ-7mF" customClass="TweetCell" customModule="Twitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9x-TJ-7mF" id="CZ1-aU-YJb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="John Chen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ee-vM-QJA">
+                                            <rect key="frame" x="93" y="11.000000000000002" width="91.666666666666686" height="21.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFS-ge-Afj">
+                                            <rect key="frame" x="93" y="36.666666666666664" width="315" height="84.333333333333343"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-Ad-Np6">
+                                            <rect key="frame" x="20" y="11" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="NWW-sP-Aby"/>
+                                                <constraint firstAttribute="height" constant="65" id="uoi-bP-gMe"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kFS-ge-Afj" firstAttribute="trailing" secondItem="CZ1-aU-YJb" secondAttribute="trailingMargin" id="NJK-C5-eyw"/>
+                                        <constraint firstItem="aYZ-Ad-Np6" firstAttribute="top" secondItem="CZ1-aU-YJb" secondAttribute="topMargin" id="RZ2-pe-Tu0"/>
+                                        <constraint firstItem="kFS-ge-Afj" firstAttribute="bottom" secondItem="CZ1-aU-YJb" secondAttribute="bottomMargin" id="TJW-8S-2LP"/>
+                                        <constraint firstItem="9ee-vM-QJA" firstAttribute="top" secondItem="CZ1-aU-YJb" secondAttribute="topMargin" id="WaV-Eb-cjM"/>
+                                        <constraint firstItem="9ee-vM-QJA" firstAttribute="leading" secondItem="aYZ-Ad-Np6" secondAttribute="trailing" constant="8" id="lT2-hr-uH9"/>
+                                        <constraint firstItem="kFS-ge-Afj" firstAttribute="leading" secondItem="aYZ-Ad-Np6" secondAttribute="trailing" constant="8" id="oH0-SL-gf9"/>
+                                        <constraint firstItem="aYZ-Ad-Np6" firstAttribute="leading" secondItem="CZ1-aU-YJb" secondAttribute="leadingMargin" id="uo8-rV-si9"/>
+                                        <constraint firstItem="kFS-ge-Afj" firstAttribute="top" secondItem="9ee-vM-QJA" secondAttribute="bottom" constant="4" id="v2L-zT-VRz"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="aYZ-Ad-Np6" id="mSG-Pg-hNH"/>
+                                    <outlet property="tweetContent" destination="kFS-ge-Afj" id="nDa-vY-tSc"/>
+                                    <outlet property="userNameLabel" destination="9ee-vM-QJA" id="a8J-gj-kSF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -85,14 +121,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSo-nn-v2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="-305"/>
+            <point key="canvasLocation" x="92.523364485981304" y="-305.83153347732184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jiy-p2-Z6f">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="8Pp-Kf-1zc" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hfr-Tn-7dd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.39954285280000001" green="0.80669302030000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.39954285280000001" green="0.80669302030000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
